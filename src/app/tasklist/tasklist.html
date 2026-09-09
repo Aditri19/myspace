@@ -1,0 +1,16 @@
+<form [formGroup]="taskForm" (ngSubmit)="submitTask()">
+    <label for="task">Task: </label>
+    <input id ="task" type="text" placeholder="Enter task" formControlName="task">
+    <button type="submit">Add Task</button>
+</form>
+<!-- <button (click)="updateTask()">Update Task</button> -->
+
+<div class = "task-list-box">
+    <h2>Task List</h2>
+    {{ tasklist.length==0 ? 'No tasks available' : '' }}
+    <ol>
+        <li *ngFor="let item of tasklist">
+    {{ item }}
+  </li>
+    </ol>
+</div>

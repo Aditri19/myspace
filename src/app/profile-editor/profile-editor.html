@@ -1,0 +1,12 @@
+<div class ="user-profile-box">
+    <form [formGroup]="userProfile" (ngSubmit)="onSubmit()">
+        <label for="firstName">First Name: </label>
+        <input id="firstName" type="text" formControlName="firstName">
+        <label for="lastName">Last Name: </label>
+        <input id="lastName" type="text" formControlName="lastName">
+        <button [disabled]="!userProfile.valid" type="submit">Submit</button>
+    </form>
+    <h3 class="welcome-message">Welcome {{ name }}!!</h3>
+</div>
+
+
